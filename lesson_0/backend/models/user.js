@@ -35,4 +35,4 @@ const userSchema = new mongoose.Schema({
 //OR THIS WAY
 
 //"user" has to be singular
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("User", userSchema);
