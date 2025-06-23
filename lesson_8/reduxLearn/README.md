@@ -24,3 +24,8 @@ import store  and import Provider package wherever you need to place the provide
 import {store} from './whatever/store/store.js'
 import { Provider } from 'react-redux'  
 then wrap em in <Provider store={store}><Provider/>
+
+
+# next steps
+learn redux thunk  
+performing async functions in RTK 
