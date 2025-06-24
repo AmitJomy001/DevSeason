@@ -10,12 +10,12 @@ const executeCpp = async (filePath: string) => {
     const lastString = path.basename(filePath); //this extracts the last part of the path, in our case which is the unique_string.language 
     const [jobId, language] = lastString.split('.'); //for asdf.cpp we get jobId = [ "asdf", "cpp" ]
     //languge is anyways cpp so you could've done > lastString.split('.')[0]
-    const outputFileName = `${jobId}.out`; 
+    const outputFileName = `${jobId}.exe`; 
     const outPath = path.join(dirOutput, `${outputFileName}`); 
 
 
     return new Promise((resolve: any, reject: any) => {
-        // g++ <filePath> -o <outPath> && cd <outPath> && ./<jobId>.out
+        // g++ <filePath> -o <outPath> && cd <outPath> && ./<jobId>.exe
 
         exec(`g++ ${filePath} -o ${outPath} && cd ${dirOutput} && ${outputFileName}`, (error: any, stdout: string, stderr: string) => {
             if (error) {
